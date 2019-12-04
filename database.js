@@ -6,6 +6,7 @@ start();
 function start() {
     MongoClient.connect(url, function(err, db) {
         if (err) throw err;
+        //hello
         var myobj = [{ number: 2, name: "Jonathan Halbrook", numPeople: 4 }];
         // createCol(db, "people");
 
