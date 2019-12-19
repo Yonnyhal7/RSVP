@@ -14,17 +14,39 @@
                 margin: 4px 2px;
                 cursor: pointer;
             }
-            
+            .centerInp{
+                position:absolute;
+                left:30%;
+                top:10px;
+            }
+            .centerBut{
+                position:absolute;
+                left:45%;
+                top:100px;
+            }
+            pre {
+                font-size: 1.5rem;
+                margin: 0;
+            }
+            .thanks{
+                position: absolute;
+                left:40%;
+                top:150px;
+            }
         </style>
 
     </head>
     <body>
+        <div class = centerInp>
+            <pre>
+            First Name:          <input type = "text" id = "firstName" value = "">
+            Last Name:           <input type = "text" id = "lastName" value = "">
+            Number of Attendees: <input type = "text" id = "numAttend" value = "">
+            </pre>
+        </div>
+        <button class="button centerBut" id="myBtn">Submit!</button>
+        <p class = thanks id="demo"></p>
         
-        <center>
-            <input type = "text" id="firstName" value = ""><br>
-            <input type = "text" id="lastName" value = ""><br>
-            <button class=button id="myBtn">Submit!</button>
-        <p id="demo"></p></center>
         <script>
             // var MongoClient = require('mongodb').MongoClient;
             // var url = "mongodb+srv://Jonnyhal:Yonnyhal_07@cluster0-7wpgt.mongodb.net/test?retryWrites=true&w=majority";
@@ -37,7 +59,6 @@
             // }
             // x = myObject.fullName();
             //hello
-            var name = "Jonathan Halbrook";
             document.getElementById("myBtn").onclick = displayDate;
 
             function displayDate() {
