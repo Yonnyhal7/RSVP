@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .button {
+                background-color: rgb(76, 139, 175);
+                border-style: inset;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+            
+        </style>
+
+    </head>
+    <body>
+        
+        <center>
+            <input type = "text" id="firstName" value = ""><br>
+            <input type = "text" id="lastName" value = ""><br>
+            <button class=button id="myBtn">Submit!</button>
+        <p id="demo"></p></center>
+        <script>
+            // var MongoClient = require('mongodb').MongoClient;
+            // var url = "mongodb+srv://Jonnyhal:Yonnyhal_07@cluster0-7wpgt.mongodb.net/test?retryWrites=true&w=majority";
+            // var myObject = {
+            //     firstName:"John",
+            //     lastName: "Doe",
+            //     fullName: function() {
+            //         return this.firstName + " " + this.lastName;
+            //     }
+            // }
+            // x = myObject.fullName();
+            var name = "Jonathan Halbrook";
+            document.getElementById("myBtn").onclick = displayDate;
+
+            function displayDate() {
+                var firstName = document.getElementById("firstName").value;
+                var lastName = document.getElementById("lastName").value;
+                // var lastName = "Halbrook";
+                document.getElementById("demo").innerHTML = "Thank you for RSVPing " + firstName + " " + lastName + "!";
+            }
+        </script>
+    </body>
+</html>
