@@ -16,8 +16,7 @@ function start() {
 
         // selectAll("customers", db);
         var myobj = { name: "Matt Halbrook", numPeople: 3 };
-        // console.log(myobj);
-
+        // console.log(myobj); 
         // myobj.number = 5;
         // var newobj = Object.entries(myobj);
         // console.log(newobj);
