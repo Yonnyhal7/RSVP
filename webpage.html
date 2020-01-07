@@ -1,73 +1,86 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <style>
-            .button {
-                background-color: rgb(76, 139, 175);
-                border-style: inset;
-                color: white;
-                padding: 15px 32px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 16px;
-                margin: 4px 2px;
-                cursor: pointer;
-            }
-            .centerInp{
-                position:absolute;
-                left:30%;
-                top:10px;
-            }
-            .centerBut{
-                position:absolute;
-                left:45%;
-                top:100px;
-            }
-            pre {
-                font-size: 1.5rem;
-                margin: 0;
-            }
-            .thanks{
-                position: absolute;
-                left:40%;
-                top:150px;
-            }
-        </style>
 
-    </head>
-    <body>
-        <div class = centerInp>
-            <pre>
-            First Name:          <input type = "text" id = "firstName" value = "">
-            Last Name:           <input type = "text" id = "lastName" value = "">
-            Number of Attendees: <input type = "text" id = "numAttend" value = "">
-            </pre>
-        </div>
-        <button class="button centerBut" id="myBtn">Submit!</button>
-        <p class = thanks id="demo"></p>
+<head>
+    <title>RSVP Halbrook Wedding</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="initial-scale=1">
+    <style>
+        h1 {
+            font-size: 2vw;
+            text-align: center;
+            font-family: 'Brush Script MT', 'Brush Script Std', cursive;
+        }
         
-        <script>
-            // var MongoClient = require('mongodb').MongoClient;
-            // var url = "mongodb+srv://Jonnyhal:Yonnyhal_07@cluster0-7wpgt.mongodb.net/test?retryWrites=true&w=majority";
-            // var myObject = {
-            //     firstName:"John",
-            //     lastName: "Doe",
-            //     fullName: function() {
-            //         return this.firstName + " " + this.lastName;
-            //     }
-            // }
-            // x = myObject.fullName();
-            //hello
-            document.getElementById("myBtn").onclick = displayDate;
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+        
+        .input-center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 1px;
+            width: 10%;
+        }
+    </style>
+</head>
 
-            function displayDate() {
-                var firstName = document.getElementById("firstName").value;
-                var lastName = document.getElementById("lastName").value;
-                
-                // var lastName = "Halbrook";
-                document.getElementById("demo").innerHTML = "Thank you for RSVPing " + firstName + " " + lastName + "!";
-            }
-        </script>
-    </body>
+<body style=background-color:ivory>
+    <!--FRONT END-->
+    <br><br><br>
+    <nav class=center style=background-color:transparent>
+        <ul>
+            <li><a href="#">Our Wedding</a></li>
+            <li><a href="#">Details</a></li>
+            <li><a href="#">Photos</a></li>
+            <li><a href="#">Registry</a></li>
+            <li><a href="#">RSVP</a></li>
+        </ul>
+    </nav>
+    <h1>Please RSVP for Jonny and Hayley's Wedding at the Bottom.</h1>
+
+
+    <img class="Img" src="Images/image0.jpeg" alt="Engagement">
+    <br>
+    <p>
+
+        <b class="input-center">First Name: <input type="text" id="firstName" value=""></b class="input-center">
+        <br> <b class="input-center">Last Name:<br> <input type="text" id="lastName" value=""></b class="input-center">
+        <br> <b class="input-center">Number of Attendees:<br> <input type="text" id="numAttend" value=""></b class="input-center">
+
+    </p>
+    <button class="button" id="myBtn">Submit!</button>
+    <p class="center" id="demo"></p>
+
+    <!-- <div class="vl"></div> -->
+
+    <!--BACK END-->
+    <script>
+        // var MongoClient = require('mongodb').MongoClient;
+        // var url = "mongodb+srv://Jonnyhal:Yonnyhal_07@cluster0-7wpgt.mongodb.net/test?retryWrites=true&w=majority";
+        // var myObject = {
+        //     firstName:"John",
+        //     lastName: "Doe",
+        //     fullName: function() {
+        //         return this.firstName + " " + this.lastName;
+        //     }
+        // }
+        // x = myObject.fullName();
+        //hello
+        document.getElementById("myBtn").onclick = getName;
+
+        function getName() {
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+
+            // var lastName = "Halbrook";
+            document.getElementById("demo").innerHTML = "Thank you for RSVPing " + firstName + " " + lastName + "!";
+        }
+    </script>
+</body>
+
 </html>
