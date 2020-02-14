@@ -162,8 +162,7 @@
 
     <!--BACK END-->
     <script>
-        // var MongoClient = require('mongodb').MongoClient;
-        // var url = "mongodb+srv://Jonnyhal:Yonnyhal_07@cluster0-7wpgt.mongodb.net/test?retryWrites=true&w=majority";
+        
         // var myObject = {
         //     firstName:"John",
         //     lastName: "Doe",
@@ -176,11 +175,28 @@
         document.getElementById("myBtn").onclick = getName;
 
         function getName() {
+            
             var firstName = document.getElementById("firstName").value;
             var lastName = document.getElementById("lastName").value;
-
+            // var MongoClient = require('mongodb').MongoClient;
+            // var url = "mongodb+srv://Jonnyhal:Yonnyhal_07@cluster0-7wpgt.mongodb.net/test?retryWrites=true&w=majority";
+            // MongoClient.connect(url, function(err, db) {
+            //     if (err) throw err;
+            //     var myobj = { name: "Matt Halbrook", numPeople: 3 };
+            //     findLastAndInsert(db, "people", myobj);
+            //     function findLastAndInsert(db, name, myobj) {
+            //         var dbo = db.db("mydb");
+            //         var a = dbo.collection(name).find({}, { projection: { _id: 0, number: 1 } }).toArray(function(err, result) {
+            //             if (err) throw err;
+            //             insertDB(db, name, newobj);
+            //             db.close();
+            //         });
+            //         return a;
+            //     }
+            // });
             // var lastName = "Halbrook";
             document.getElementById("demo").innerHTML = "Thank you for RSVPing " + firstName + " " + lastName + "!";
+            
         }
     </script>
 </body>
